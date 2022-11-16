@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="gaff_arrete_tree">
+            <field name="name">gaff.arrete.tree</field>
+            <field name="model">gaff.arrete</field>
+            <field name="arch" type="xml">
+                <tree string="Liste des arrete">
+                    <field name="code"/>
+                    <field name="date"/>
+            
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="gaff_arrete_form">
+            <field name="name">gaff.arrete.form</field>
+            <field name="model">gaff.arrete</field>
+            <field name="arch" type="xml">
+                <form string="Formulaire arrete">
+                    <sheet>
+                        <group col="2">
+                            <field name="code" colspan="2"/>
+                            <field name="date" colspan="2"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="gaff_arrete_action">
+            <field name="name">arrete</field>
+            <field name="res_model">gaff.arrete</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_arrete" parent="gaff_root" action="gaff_arrete_action"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="gaff_province_tree">
+            <field name="name">gaff.province.tree</field>
+            <field name="model">gaff.province</field>
+            <field name="arch" type="xml">
+                <tree string="Liste des province">
+                    <field name="code"/>
+                    <field name="libelle"/>
+            
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="gaff_province_form">
+            <field name="name">gaff.province.form</field>
+            <field name="model">gaff.province</field>
+            <field name="arch" type="xml">
+                <form string="Formulaire province">
+                    <sheet>
+                        <group col="2">
+                            <field name="code" colspan="2"/>
+                            <field name="libelle" colspan="2"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="gaff_province_action">
+            <field name="name">Province</field>
+            <field name="res_model">gaff.province</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_province" parent="gaff_root" action="gaff_province_action"/>
+
+    </data>
+</odoo>

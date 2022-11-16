@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="gaff_fonction_tree">
+            <field name="name">gaff.fonction.tree</field>
+            <field name="model">gaff.fonction</field>
+            <field name="arch" type="xml">
+                <tree string="Liste des fonction">
+                    <field name="code"/>
+                    <field name="libelle"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="gaff_fonction_form">
+            <field name="name">gaff.fonction.form</field>
+            <field name="model">gaff.fonction</field>
+            <field name="arch" type="xml">
+                <form string="Formulaire fonction">
+                    <sheet>
+                        <group col="2">
+                            <field name="code" colspan="2"/>
+                            <field name="libelle" colspan="2"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="gaff_fonction_action">
+            <field name="name">Fonction</field>
+            <field name="res_model">gaff.fonction</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_fonction" parent="gaff_root" action="gaff_fonction_action"/>
+
+    </data>
+</odoo>

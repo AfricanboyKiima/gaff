@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="gaff_domaine_tree">
+            <field name="name">gaff.domaine.tree</field>
+            <field name="model">gaff.domaine</field>
+            <field name="arch" type="xml">
+                <tree string="Liste des domaine">
+                    <field name="code"/>
+                    <field name="libelle"/>
+            
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="gaff_domaine_form">
+            <field name="name">gaff.domaine.form</field>
+            <field name="model">gaff.domaine</field>
+            <field name="arch" type="xml">
+                <form string="Formulaire domaine">
+                    <sheet>
+                        <group col="2">
+                            <field name="code" colspan="2"/>
+                            <field name="libelle" colspan="2"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="gaff_domaine_action">
+            <field name="name">domaine</field>
+            <field name="res_model">gaff.domaine</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_domaine" parent="gaff_root" action="gaff_domaine_action"/>
+
+    </data>
+</odoo>

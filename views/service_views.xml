@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="gaff_service_tree">
+            <field name="name">gaff.service.tree</field>
+            <field name="model">gaff.service</field>
+            <field name="arch" type="xml">
+                <tree string="Liste des service">
+                    <field name="code"/>
+                    <field name="libelle"/>
+            
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="gaff_service_form">
+            <field name="name">gaff.service.form</field>
+            <field name="model">gaff.service</field>
+            <field name="arch" type="xml">
+                <form string="Formulaire service">
+                    <sheet>
+                        <group col="2">
+                            <field name="code" colspan="2"/>
+                            <field name="libelle" colspan="2"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="gaff_service_action">
+            <field name="name">service</field>
+            <field name="res_model">gaff.service</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_service" parent="gaff_root" action="gaff_service_action"/>
+
+    </data>
+</odoo>

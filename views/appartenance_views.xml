@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="gaff_grade_tree">
+            <field name="name">gaff.grade.tree</field>
+            <field name="model">gaff.grade</field>
+            <field name="arch" type="xml">
+                <tree string="Liste des grade">
+                    <field name="code"/>
+                    <field name="libelle"/>
+            
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="gaff_grade_form">
+            <field name="name">gaff.grade.form</field>
+            <field name="model">gaff.grade</field>
+            <field name="arch" type="xml">
+                <form string="Formulaire grade">
+                    <sheet>
+                        <group col="2">
+                            <field name="code" colspan="2"/>
+                            <field name="libelle" colspan="2"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="gaff_grade_action">
+            <field name="name">Grade</field>
+            <field name="res_model">gaff.grade</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_grade" parent="gaff_root" action="gaff_grade_action"/>
+
+    </data>
+</odoo>
