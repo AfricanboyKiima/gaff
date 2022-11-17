@@ -9,5 +9,5 @@ class Arrete(models.Model):#cette modele represente Arrete dans notre base de do
     _description = "Gestion des Arretée"
     _rec_name = "libelle"
 
-    code = fields.char(string="CODE", required = True)
+    code = fields.Char(string="CODE", required = True)
     date = fields.Date(string="DATE")
