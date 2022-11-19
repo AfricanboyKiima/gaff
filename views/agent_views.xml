@@ -31,7 +31,7 @@
             <field name="arch" type="xml">
                 <form string="Formulaire agent">
                     <sheet>
-                        <group col="2">
+                        <group col="14">
                             <field name="matricule" colspan="2"/>
                             <field name="nom" colspan="2"/>
                             <field name="postnom" colspan="2"/>
