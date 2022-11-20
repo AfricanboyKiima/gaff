@@ -7,7 +7,7 @@ from odoo import api, fields, models, _
 class Arrete(models.Model):#cette modele represente Arrete dans notre base de données
     _name = "gaff.arrete"
     _description = "Gestion des Arretée"
-    _rec_name = "libelle"
+    _rec_name = "code"
 
     code = fields.Char(string="CODE", required = True)
     date = fields.Date(string="DATE")

@@ -10,15 +10,10 @@
                             <field name="nom"/>
                             <field name="postnom"/>
                             <field name="prenom"/>
-                            <field name="datenaissance"/>
-                            <field name="lieunaissance"/>
-                            <field name="sexe"/>
-                            <field name="telephone"/>
-                            <field name="adresse"/>
+                            <field name="tel"/>
                             <field name="fonction"/>
                             <field name="grade"/>
                             <field name="arrete"/>
-                            <field name="province"/>
                             <field name="service"/>
             
                 </tree>
@@ -31,7 +26,7 @@
             <field name="arch" type="xml">
                 <form string="Formulaire agent">
                     <sheet>
-                        <group col="14">
+                        <group col="6">
                             <field name="matricule" colspan="2"/>
                             <field name="nom" colspan="2"/>
                             <field name="postnom" colspan="2"/>
@@ -39,13 +34,14 @@
                             <field name="datenaissance" colspan="2"/>
                             <field name="lieunaissance" colspan="2"/>
                             <field name="sexe" colspan="2"/>
-                            <field name="telephone" colspan="2"/>
-                            <field name="adresse" colspan="2"/>
+                            <field name="tel" colspan="2"/>
+                            
                             <field name="fonction" colspan="2"/>
                             <field name="grade" colspan="2"/>
                             <field name="arrete" colspan="2"/>
                             <field name="province" colspan="2"/>
                             <field name="service" colspan="2"/>
+                            <field name="adresse" colspan="4"/>
                         </group>
                     </sheet>
                 </form>
@@ -53,7 +49,7 @@
         </record>
 
         <record model="ir.actions.act_window" id="gaff_agent_action">
-            <field name="name">agent</field>
+            <field name="name">Agent</field>
             <field name="res_model">gaff.agent</field>
             <field name="view_mode">tree,form</field>
         </record>

@@ -7,7 +7,7 @@ from odoo import api, fields, models, _
 class Agent(models.Model):# class est une representation instructif d'un objet
     _name = "gaff.agent"
     _description = "Gestion des agents"
-    _rec_name = "NOM"
+    _rec_name = "nom"
 
     matricule = fields.Char(string="MATRICULE",required=True)
     nom = fields.Char(string="NOM")
@@ -17,7 +17,7 @@ class Agent(models.Model):# class est une representation instructif d'un objet
     lieunaissance = fields.Char(string="LIEUNAISSANCE")
     sexe = fields.Char(string="SEXE")
     tel = fields.Char("TELEPHONE")
-    adresse = fields.Char("ADRESSE")
+    adresse = fields.Text("ADRESSE")
     fonction = fields.Many2one("gaff.fonction", string="FONCTION")
     grade = fields.Many2one("gaff.grade", string="GRADE")
     arrete = fields.Many2one("gaff.arrete", string="ARRETE")
