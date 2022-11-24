@@ -11,3 +11,4 @@ class Service(models.Model):
 
     code = fields.Char(string="CODE",required=True)
     libelle = fields.Char(string="LIBELLE")
+    agents = fields.One2many("gaff.agent","service", string="AGENTS")

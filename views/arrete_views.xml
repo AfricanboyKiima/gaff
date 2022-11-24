@@ -29,7 +29,7 @@
         </record>
 
         <record model="ir.actions.act_window" id="gaff_arrete_action">
-            <field name="name">arrete</field>
+            <field name="name">Arrete</field>
             <field name="res_model">gaff.arrete</field>
             <field name="view_mode">tree,form</field>
         </record>
