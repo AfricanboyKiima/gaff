@@ -29,7 +29,7 @@
         </record>
 
         <record model="ir.actions.act_window" id="gaff_service_action">
-            <field name="name">service</field>
+            <field name="name">Service</field>
             <field name="res_model">gaff.service</field>
             <field name="view_mode">tree,form</field>
         </record>

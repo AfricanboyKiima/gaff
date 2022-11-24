@@ -7,7 +7,7 @@ from odoo import api, fields, models, _
 class Appartenance(models.Model):
     _name = "gaff.appartenance"
     _description = "Gestion des appartenance"
-    _rec_name = "appartenance"
+    _rec_name = "agent"
 
 
     agent = fields.Many2one("gaff.agent",string="AGENT")
