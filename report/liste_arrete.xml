@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="liste_arrete">
+            <t t-call="web.html_container">
+                
+                    <t t-call="web.internal_layout">
+                        <div >
+                            <div class="page">
+                                <center>
+                                    <div>
+                                        <h3>LISTE DES ARRETE</h3>
+                                    </div>
+                                </center>
+                                
+                                <div class="row">
+                                    <table class="table table-striped" style="width:95%; margin-left:20px;">
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align:center;width:10%;border: 1px solid black;">
+                                                    CODE
+                                                </th>
+                                                <th style="text-align:center;width:30%;border: 1px solid black;">
+                                                    DATE
+                                                </th>
+                                            </tr>
+                                       </thead>
+                                       <tbody>
+                                        <tr  t-foreach="docs" t-as="o">
+                                            <td style="text-align:center;width:10%;border: 1px solid black;">
+                                                <t t-esc="o.code"/>
+                                            </td>
+                                            
+                                            <td style="text-align:center;width:20%;border: 1px solid black;">
+                                                <t t-esc="o.date"/>
+                                                </td>
+                                        </tr>
+                                       </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                
+            </t>
+        </template>
+        <report id="report_liste_arrete" model="gaff.arrete" string="Liste des arretes" menu="True" name="gaff.liste_arrete" file="gaff.liste_arrete" report_type="qweb-pdf" />
+    </data>
+</odoo>  

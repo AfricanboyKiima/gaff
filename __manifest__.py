@@ -33,6 +33,7 @@ Cette application contient tout nos code source de gestions des affectations
         'views/arrete_views.xml',
         'views/service_views.xml',
         'report/liste_agents.xml',
+        'report/liste_arrete.xml'
         # 'views/mail_activity_views.xml',
         # 'views/assets.xml',
         # 'views/sale_portal_templates.xml',
